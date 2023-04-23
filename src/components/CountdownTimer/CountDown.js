@@ -20,7 +20,15 @@ function CountDown() {
     }
   
     intervalRef.current = setInterval(() => {
-      setTime((time) => time - 1);
+      setTime((time) => {
+        if (time > 0) {
+          return time - 1;
+        } else {
+          setIsRunning(false);
+          clearInterval(intervalRef.current);
+          return 0;
+        }
+      });
     }, 1000);
   };
 

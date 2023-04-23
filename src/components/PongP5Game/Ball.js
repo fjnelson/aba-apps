@@ -1,11 +1,11 @@
 const VELOCITY = 5;
-const VELOCITY_INC = 1.5;
+const VELOCITY_INC = 0.75;
 const WIN_SCORE = 3;
 export class Ball {
   constructor(p5, computerScore, playerScore, volleyRef) {
     this.p5 = p5;
     this.d = 30;
-    this.dOffset = this.d + 20;
+    this.dOffset = this.d + Math.round(this.d * 0.65);
     this.r = this.d / 2;
 
     this.canvasHeight = this.p5.height;
@@ -71,7 +71,7 @@ export class Ball {
   }
 
   render() {
-    this.p5.fill(255, 255, 0);
+    this.p5.fill("yellow");
     this.p5.ellipse(this.location.x, this.location.y, this.d, this.d);
     this.updatePosition();
   }
@@ -84,16 +84,18 @@ export class Ball {
   hitPaddle() {
     this.volley = this.volley + 1;
     this.volleyRef.current.innerHTML = this.volley;
-    this.velocity.mult(-1 & (1 + VELOCITY_INC), 1);
+    this.velocity.setMag(this.velocity.mag() + VELOCITY_INC).mult(-1, 1);
   }
 
   updatePosition() {
     // Edges
-    if (this.location.x + this.r > this.canvasWidth) {
+    // Right Edge
+    if (this.location.x > this.canvasWidth && this.velocity.y > 0) {
       this.score.player++;
       this.resetFromScore();
     }
-    if (this.location.x - this.r < 0) {
+    // Left Edge
+    if (this.location.x < 0 && this.velocity.y < 0) {
       this.score.computer++;
       this.resetFromScore();
     }

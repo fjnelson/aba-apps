@@ -23,7 +23,7 @@ Hosted Application: insert installed app URL here
 
 ## Description
 
-As a parent or caregiver of a child with autism or other developmental disabilities, I want an ABA app that has all the tools and interaction programs that I need all in one dashboard, so that I don't have to have multiple applications open which will allow me more 1:1 time with the child.
+As a parent or caregiver of a child with autism or other developmental disabilities, I want a learning app that has all the tools and interaction programs that I need all in one dashboard, so that I don't have to have multiple applications open which will allow me more 1:1 time with the child.
 
 
 ## Hosting

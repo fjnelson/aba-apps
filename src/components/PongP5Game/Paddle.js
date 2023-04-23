@@ -5,7 +5,7 @@ export class Paddle {
   constructor(p5, index, isPlayer = false) {
     this.p5 = p5;
 
-    this.w = 10;
+    this.w = 15;
     this.h = 125;
     this.canvasHeight = this.p5.height;
     this.canvasWidth = this.p5.width;

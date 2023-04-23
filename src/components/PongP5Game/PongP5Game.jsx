@@ -43,13 +43,13 @@ export default function PongP5Game({ computerScore, playerScore, volleyRef }) {
       return;
     }
 
-    ball.render();
-    player.render();
-    computer.render();
-
     if (player.isInterecting(ball) || computer.isInterecting(ball)) {
       ball.hitPaddle();
     }
+
+    ball.render();
+    player.render();
+    computer.render();
 
     if (!player.isPlayer) {
       player.moveAI(ball);
