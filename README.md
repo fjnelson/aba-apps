@@ -11,7 +11,7 @@
 - [Description](#Description)
 - [Hosting](#Hosting)
 - [Screenshot](#Screenshot)
-- [Installation](#Installing)
+- [Installing](#Installing)
 - [Team](#Team)
 - [License](#License)
 # Portfolio
@@ -36,7 +36,7 @@ Netlify hosting: insert installed app URL here
 ![portfolio ace](./src/components/images/app-screenshot.JPG "screenshot of application")
 
 
-## Installing & Setup
+## Installing
 
 If you're looking at hosting this locally, you'll need to install NodeJS.
 

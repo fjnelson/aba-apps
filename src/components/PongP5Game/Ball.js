@@ -84,7 +84,7 @@ export class Ball {
   hitPaddle() {
     this.volley = this.volley + 1;
     this.volleyRef.current.innerHTML = this.volley;
-    this.velocity.add(VELOCITY_INC, VELOCITY_INC).mult(-1, 1);
+    this.velocity.mult(-1 & (1 + VELOCITY_INC), 1);
   }
 
   updatePosition() {
