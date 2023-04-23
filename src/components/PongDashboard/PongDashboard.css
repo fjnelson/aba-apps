@@ -1,0 +1,31 @@
+.dashboard-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* width: min(50%, 800px); */
+  width: 100%;
+  display: flex;
+}
+
+.game-container {
+  align-items: center;
+  justify-content: center;
+  width: min(60%, 800px);
+  display: flex;
+}
+
+.title {
+  font-size: 62px;
+  font-weight: bold;
+}
+
+.stat-container {
+  font-size: 44px;
+  font-weight: bold;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+
+  display: flex;
+  flex-direction: row;
+}

@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.app {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+  background: linear-gradient(to bottom right, #363636, #363636, #641a1a, #470606);
+ 
+  /* width: 100%;   */
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: #b6b6b6
+}
+
+.dashboard-card-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dashboard-card {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 1px solid gray;
+  border-radius: 5px;
+  text-align: center;
+  width: 200px;
+}
+
+.dashboard-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.card-text {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.calculator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  margin-top: 10px;
+}
+
+.buttons button {
+  padding: 10px;
+  font-size: 24px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.screen {
+  font-size: 36px;
+  text-align: right;
+  margin-bottom: 10px;
+  height: 50px;
+  color: black;
+  background-color: white;
+  border: solid black 1px;
+}
+
+button:hover {
+  background-color: #aaa;
+}
+
+button:active {
+  background-color: #888;
 }
