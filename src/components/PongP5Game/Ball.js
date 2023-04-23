@@ -1,5 +1,5 @@
 const VELOCITY = 5;
-const VELOCITY_INC = 1;
+const VELOCITY_INC = 1.5;
 const WIN_SCORE = 3;
 export class Ball {
   constructor(p5, computerScore, playerScore, volleyRef) {
@@ -84,9 +84,7 @@ export class Ball {
   hitPaddle() {
     this.volley = this.volley + 1;
     this.volleyRef.current.innerHTML = this.volley;
-    this.velocity
-      .add(this.p5.createVector(VELOCITY_INC, VELOCITY_INC))
-      .mult(this.p5.createVector(-1, 1));
+    this.velocity.add(VELOCITY_INC, VELOCITY_INC).mult(-1, 1);
   }
 
   updatePosition() {
@@ -100,10 +98,10 @@ export class Ball {
       this.resetFromScore();
     }
     if (this.location.y + this.r > this.canvasHeight) {
-      this.velocity.mult(this.p5.createVector(1, -1));
+      this.velocity.mult(1, -1);
     }
     if (this.location.y - this.r < 0) {
-      this.velocity.mult(this.p5.createVector(1, -1));
+      this.velocity.mult(1, -1);
     }
 
     this.location.add(this.velocity);

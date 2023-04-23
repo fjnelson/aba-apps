@@ -34,7 +34,9 @@ export class Paddle {
 
     const paddleTop = this.location.y - this.h / 2;
     const paddleSide =
-      this.location.x + (this.index === 1 ? this.w / 2 : -(this.w / 2));
+      this.index === 1
+        ? this.location.x + this.w / 2
+        : this.location.x - this.w / 2;
     const paddleBottom = this.location.y + this.h / 2;
     return (
       paddleTop <= ballTop &&
@@ -46,7 +48,7 @@ export class Paddle {
   render() {
     this.p5.rectMode(this.p5.CENTER);
 
-    this.index === 1 ? this.p5.fill("blue") : this.p5.fill("red");
+    this.index === 1 ? this.p5.fill("green") : this.p5.fill("red");
     this.p5.rect(this.location.x, this.location.y, this.w, this.h);
   }
 
