@@ -10,6 +10,7 @@ export default function PongDashboard() {
   const [score, setScore] = React.useState({ player: 0, computer: 0 });
   const playerScore = React.useRef();
   const computerScore = React.useRef();
+  const volleyRef = React.useRef();
 
   const onUpdateScore = (previousScore) => (getUpdatedScore) => {
     setScore(getUpdatedScore(previousScore));
@@ -25,12 +26,20 @@ export default function PongDashboard() {
           </div>
 
           <div>
+            <span ref={volleyRef}>0</span>
+          </div>
+
+          <div>
             <span className="name-title">Computer - </span>
             <span ref={computerScore}>0</span>
           </div>
         </div>
       </div>
-      <PongP5Game computerScore={computerScore} playerScore={playerScore} />
+      <PongP5Game
+        computerScore={computerScore}
+        playerScore={playerScore}
+        volleyRef={volleyRef}
+      />
     </Stack>
   );
 }

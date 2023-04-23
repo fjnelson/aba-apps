@@ -1,15 +1,22 @@
-const VELOCITY = 4;
-
+const VELOCITY = 5;
+const VELOCITY_INC = 1;
+const WIN_SCORE = 3;
 export class Ball {
-  constructor(p5, canvasHeight, canvasWidth, computerScore, playerScore) {
+  constructor(p5, computerScore, playerScore, volleyRef) {
     this.p5 = p5;
-    this.d = 50;
+    this.d = 30;
     this.dOffset = this.d + 20;
     this.r = this.d / 2;
-    this.canvasHeight = canvasHeight;
-    this.canvasWidth = canvasWidth;
+
+    this.canvasHeight = this.p5.height;
+    this.canvasWidth = this.p5.width;
+
     this.playerScoreRef = playerScore;
     this.computerScoreRef = computerScore;
+    this.volleyRef = volleyRef;
+    this.gameOver = false;
+    this.winner = null;
+
     this.reset();
   }
 
@@ -17,13 +24,20 @@ export class Ball {
     this.score = { player: 0, computer: 0 };
     this.resetFromScore();
     this.resetBallPosition();
+    this.volley = 0;
+    this.volleyRef.current.innerHTML = 0;
+    this.gameOver = false;
   }
 
   resetBallPosition() {
+    this.volley = 0;
+    this.volleyRef.current.innerHTML = 0;
+
     const newRandomY = this.p5.random(
       this.dOffset,
       this.canvasHeight - this.dOffset
     );
+
     const [location, vx, vy] =
       Math.random() > 0.5
         ? // Start Left - Move Right
@@ -46,9 +60,18 @@ export class Ball {
   resetFromScore() {
     this.resetBallPosition();
     this.renderScore();
+
+    if (this.score.computer >= WIN_SCORE) {
+      this.gameOver = true;
+      this.winner = 1;
+    } else if (this.score.player >= WIN_SCORE) {
+      this.gameOver = true;
+      this.winner = 2;
+    }
   }
 
   render() {
+    this.p5.fill(255, 255, 0);
     this.p5.ellipse(this.location.x, this.location.y, this.d, this.d);
     this.updatePosition();
   }
@@ -59,7 +82,11 @@ export class Ball {
   }
 
   hitPaddle() {
-    this.velocity.mult(this.p5.createVector(this.velocity.x * -1, 1));
+    this.volley = this.volley + 1;
+    this.volleyRef.current.innerHTML = this.volley;
+    this.velocity
+      .add(this.p5.createVector(VELOCITY_INC, VELOCITY_INC))
+      .mult(this.p5.createVector(-1, 1));
   }
 
   updatePosition() {

@@ -17,7 +17,7 @@ const MainDashboard = () => {
             <p className="card-text">Pong</p>
           </div>
         </Link>
-        <Link to="/timer">
+        <Link to="/countdowntimer">
           <div className="dashboard-card">
             <img src={timer} alt="Timer icon" />
             <p className="card-text">Countdown & Timer</p>
@@ -29,7 +29,7 @@ const MainDashboard = () => {
             <p className="card-text">Calculator</p>
           </div>
         </Link>
-        <Link to="/tasks">
+        <Link to="/taskmenu">
           <div className="dashboard-card">
             <img src={tasks} alt="Tasks icon" />
             <p className="card-text">Task Menu</p>
