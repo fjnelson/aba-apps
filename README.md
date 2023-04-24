@@ -19,7 +19,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
-Hosted Application: insert installed app URL here
+Hosted Application: https://aba-apps.netlify.app/
 
 ## Description
 
@@ -27,7 +27,7 @@ As a parent or caregiver of a child with autism or other developmental disabilit
 
 
 ## Hosting
-Netlify hosting: insert installed app URL here
+Netlify hosting: https://aba-apps.netlify.app/
 
 
 
