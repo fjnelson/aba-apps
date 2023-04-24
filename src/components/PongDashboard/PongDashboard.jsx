@@ -1,20 +1,20 @@
 import React from "react";
 import PongP5Game from "../PongP5Game/PongP5Game";
 import Stack from "react-bootstrap/Stack";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+// import Container from "react-bootstrap/Container";
+// import Row from "react-bootstrap/Row";
+// import Col from "react-bootstrap/Col";
 import "./PongDashboard.css";
 
 export default function PongDashboard() {
-  const [score, setScore] = React.useState({ player: 0, computer: 0 });
+  // const [score, setScore] = React.useState({ player: 0, computer: 0 });
   const playerScore = React.useRef();
   const computerScore = React.useRef();
   const volleyRef = React.useRef();
 
-  const onUpdateScore = (previousScore) => (getUpdatedScore) => {
-    setScore(getUpdatedScore(previousScore));
-  };
+  // const onUpdateScore = (previousScore) => (getUpdatedScore) => {
+  //   setScore(getUpdatedScore(previousScore));
+  // };
   return (
     <Stack gap={3} className="dashboard-container">
       <div className="title">Play Pong</div>

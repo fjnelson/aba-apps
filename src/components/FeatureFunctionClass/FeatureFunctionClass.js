@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Row, Col } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import "../../App.css";
 
 const CardComponent = () => {
@@ -9,31 +9,20 @@ const CardComponent = () => {
         <Card.Img
           className="FFC-card"
           variant="top"
-          src={`https://picsum.photos/200?random=${Math.random()}`}
+          src={`https://source.unsplash.com/200x200/?vehicle&${Math.random()}`}
         />
         <Card.Body>
-          <Card.Title className="FFC-title">#1</Card.Title>
+          <Card.Title className="FFC-title">Vehicles</Card.Title>
         </Card.Body>
       </Card>
       <Card>
         <Card.Img
           className="FFC-card"
           variant="top"
-          src={`https://picsum.photos/200?random=${Math.random()}`}
+          src={`https://source.unsplash.com/200x200/?furniture&${Math.random()}`}
         />
         <Card.Body>
-          <Card.Title className="FFC-title">#2</Card.Title>
-        </Card.Body>
-      </Card>
-
-      <Card>
-        <Card.Img
-          className="FFC-card"
-          variant="top"
-          src={`https://picsum.photos/200?random=${Math.random()}`}
-        />
-        <Card.Body>
-          <Card.Title className="FFC-title">#3</Card.Title>
+          <Card.Title className="FFC-title">Furniture</Card.Title>
         </Card.Body>
       </Card>
 
@@ -41,10 +30,10 @@ const CardComponent = () => {
         <Card.Img
           className="FFC-card"
           variant="top"
-          src={`https://picsum.photos/200?random=${Math.random()}`}
+          src={`https://source.unsplash.com/200x200/?clothing&${Math.random()}`}
         />
         <Card.Body>
-          <Card.Title className="FFC-title">#4</Card.Title>
+          <Card.Title className="FFC-title">Clothing</Card.Title>
         </Card.Body>
       </Card>
 
@@ -52,10 +41,10 @@ const CardComponent = () => {
         <Card.Img
           className="FFC-card"
           variant="top"
-          src={`https://picsum.photos/200?random=${Math.random()}`}
+          src={`https://source.unsplash.com/200x200/?Food&${Math.random()}`}
         />
         <Card.Body>
-          <Card.Title className="FFC-title">#5</Card.Title>
+          <Card.Title className="FFC-title">Food</Card.Title>
         </Card.Body>
       </Card>
 
@@ -63,10 +52,21 @@ const CardComponent = () => {
         <Card.Img
           className="FFC-card"
           variant="top"
-          src={`https://picsum.photos/200?random=${Math.random()}`}
+          src={`https://source.unsplash.com/200x200/?animal&${Math.random()}`}
         />
         <Card.Body>
-          <Card.Title className="FFC-title">#6</Card.Title>
+          <Card.Title className="FFC-title">Animals</Card.Title>
+        </Card.Body>
+      </Card>
+
+      <Card>
+        <Card.Img
+          className="FFC-card"
+          variant="top"
+          src={`https://source.unsplash.com/200x200/?household&${Math.random()}`}
+        />
+        <Card.Body>
+          <Card.Title className="FFC-title">Household Items</Card.Title>
         </Card.Body>
       </Card>
     </div>

@@ -29,7 +29,7 @@ export class Paddle {
   isInterecting(ball) {
     const ballLeft = ball.location.x - ball.r;
     const ballRight = ball.location.x + ball.r;
-    const ballBottom = ball.location.y + ball.r;
+    // const ballBottom = ball.location.y + ball.r;
     const ballTop = ball.location.y - ball.r;
 
     const paddleTop = this.location.y - this.h / 2;

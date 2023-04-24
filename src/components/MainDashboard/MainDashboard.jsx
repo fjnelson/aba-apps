@@ -1,11 +1,12 @@
 import React from "react";
-import { Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import pong from "./PortfolioIcons/pong.png";
 import timer from "./PortfolioIcons/timer.png";
 import calculator from "./PortfolioIcons/calculator.png";
 import tasks from "./PortfolioIcons/tasks.png";
 import ffc from "./PortfolioIcons/ffc.png";
+import emotions from "./PortfolioIcons/emotions.png";
 
 const MainDashboard = () => {
   return (
@@ -39,6 +40,12 @@ const MainDashboard = () => {
           <div className="dashboard-card">
             <img src={ffc} alt="FFC icon" />
             <p className="card-text">Feature Function Class</p>
+          </div>
+        </Link>
+        <Link to="/emotions">
+          <div className="dashboard-card">
+            <img src={emotions} alt="emotions icon" />
+            <p className="card-text">Emotions</p>
           </div>
         </Link>
       </div>
