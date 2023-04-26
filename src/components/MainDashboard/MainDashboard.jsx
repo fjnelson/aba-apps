@@ -13,7 +13,7 @@ const MainDashboard = () => {
     <Container>
       <div className="dashboard-card-container">
         <Link to="/pong">
-          <div className="dashboard-card">
+          <div className="pong-card">
             <img src={pong} alt="Pong icon" />
             <p className="card-text">Pong</p>
           </div>

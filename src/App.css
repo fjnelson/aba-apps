@@ -47,7 +47,7 @@ body {
   width: 300px;
 }
 
-.dashboard-card {
+.dashboard-card, .pong-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,7 +59,7 @@ body {
   width: 300px;
 }
 
-.dashboard-card img {
+.dashboard-card img, .pong-card img {
   width: 100px;
   height: 100px;
   object-fit: contain;
@@ -153,4 +153,10 @@ button:active {
     margin-bottom: 30px;
   }
 
+}
+
+@media (max-width: 950px) {
+  .pong-card {
+    display: none;
+  }
 }
