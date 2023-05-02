@@ -8,11 +8,13 @@ import FFC from "./components/FeatureFunctionClass/FeatureFunctionClass";
 import CountDownTimer from "./components/CountdownTimer/CountDownTimer"
 import TaskMenu from "./components/TaskMenu/TaskMenu"
 import Emotions from "./components/Emotions/Emotions"
+import NavBar from "./components/Navbar/Navbar"
 
 function App() {
   return (
     <div className="app">
       <BrowserRouter>
+      <NavBar />
         <Routes>
           <Route path="/" element={<MainDashboard />} />
           <Route path="/pong" element={<PongDashboard />} />

@@ -1,15 +1,8 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import "../../App.css";
-import Button from 'react-bootstrap/Button';
-import { useNavigate } from "react-router-dom";
 
 const CardComponent = () => {
-  const navigate = useNavigate();
-
-  const handleGoBack = () => {
-    navigate(-1);
-  }
 
   return (
     <div>
@@ -78,9 +71,6 @@ const CardComponent = () => {
             <Card.Title className="FFC-title">Household Items</Card.Title>
           </Card.Body>
         </Card>
-      </div>
-      <div className="button-container">
-        <Button variant="primary" onClick={handleGoBack}>Go Back</Button>
       </div>
     </div>
   );
