@@ -159,6 +159,11 @@ button:active {
   animation: shimmer 1s ease-out infinite;
 }
 
+.ZOR-header {
+  color: white;
+  text-align: center;
+}
+
 @keyframes shimmer {
   0% {
     background-position: 0 0;

@@ -10,6 +10,7 @@ import redZone from "./images/redzone.JPG";
   
 const CardComponent = () => (
     <div>
+    <h1 className="ZOR-header">What Zone are YOU in?</h1>
       <div className="ZOR-container">
         <Card>
           <Card.Img
