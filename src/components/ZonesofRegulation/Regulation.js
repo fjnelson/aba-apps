@@ -10,7 +10,7 @@ import redZone from "./images/redzone.JPG";
   
 const CardComponent = () => (
     <div>
-      <div className="FFC-container">
+      <div className="ZOR-container">
         <Card>
           <Card.Img
             className="FFC-card"
