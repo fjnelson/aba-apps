@@ -9,6 +9,7 @@ import CountDownTimer from "./components/CountdownTimer/CountDownTimer"
 import TaskMenu from "./components/TaskMenu/TaskMenu"
 import Emotions from "./components/Emotions/Emotions"
 import NavBar from "./components/Navbar/Navbar"
+import ZonesofRegulation from "./components/ZonesofRegulation/Regulation"
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/countdowntimer" element={<CountDownTimer />} />
           <Route path="/taskmenu" element={<TaskMenu />} />
           <Route path="/emotions" element={<Emotions />} />
+          <Route path="/zonesofregulation" element={<ZonesofRegulation />} />
         </Routes>
       </BrowserRouter>
     </div>
