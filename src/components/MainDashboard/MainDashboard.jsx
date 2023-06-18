@@ -5,7 +5,7 @@ import pong from "./PortfolioIcons/pong.png";
 import timer from "./PortfolioIcons/timer.png";
 import calculator from "./PortfolioIcons/calculator.png";
 import tasks from "./PortfolioIcons/tasks.png";
-import ffc from "./PortfolioIcons/ffc.png";
+import ffc from "./PortfolioIcons/featurefunctionclass.JPG";
 import emotions from "./PortfolioIcons/emotions.png";
 import zor from "./PortfolioIcons/zor.png";
 
