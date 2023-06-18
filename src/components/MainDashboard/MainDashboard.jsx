@@ -8,6 +8,7 @@ import tasks from "./PortfolioIcons/tasks.png";
 import ffc from "./PortfolioIcons/featurefunctionclass.JPG";
 import emotions from "./PortfolioIcons/emotions.png";
 import zor from "./PortfolioIcons/zor.png";
+import animals from "./PortfolioIcons/animals.png";
 
 const MainDashboard = () => {
   return (
@@ -53,6 +54,12 @@ const MainDashboard = () => {
           <div className="dashboard-card">
             <img src={zor} alt="zones of regulation icon" />
             <p className="card-text">Zones of Regulation</p>
+          </div>
+        </Link>
+        <Link to="/animals">
+          <div className="dashboard-card">
+            <img src={animals} alt="animals icon" />
+            <p className="card-text">Which animal is this</p>
           </div>
         </Link>
       </div>
