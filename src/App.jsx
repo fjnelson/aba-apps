@@ -10,6 +10,7 @@ import TaskMenu from "./components/TaskMenu/TaskMenu"
 import Emotions from "./components/Emotions/Emotions"
 import NavBar from "./components/Navbar/Navbar"
 import ZonesofRegulation from "./components/ZonesofRegulation/Regulation"
+import Animal from "./components/animals/animals"
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/taskmenu" element={<TaskMenu />} />
           <Route path="/emotions" element={<Emotions />} />
           <Route path="/zonesofregulation" element={<ZonesofRegulation />} />
+          <Route path="/animals" element={<Animal />} />
         </Routes>
       </BrowserRouter>
     </div>
